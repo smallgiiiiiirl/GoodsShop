@@ -1,0 +1,9 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.footer_paragraph {
+  display: flex;
+  justify-content: center;
+}
