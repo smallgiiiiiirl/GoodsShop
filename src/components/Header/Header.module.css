@@ -1,0 +1,7 @@
+.input_wrap {
+  display: flex;
+  justify-content: center;
+}
+.input_element {
+  width: 80%;
+}
