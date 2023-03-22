@@ -1,24 +1,27 @@
 import React from 'react';
-import Apps from "./Apps.module.css"
+import "./Apps.scss"
 import 'antd/dist/reset.css';
 import { Navigate, Route, Routes } from 'react-router';
 import { Layout } from './Layout';
 import { MainPage } from '../pages/MainPage';
-import { CategoryPage } from "../pages/CategoryPage"
 import { LayoutMain } from './LayoutMain';
+import { ProductCard } from 'pages/ProductPage/ProductPage';
+import { Basket } from 'pages/Basket';
+
 
 
 export const App = () => {
   return (
-    <div className={Apps.App}>
+    <div className="App">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<LayoutMain />}>
             <Route path="/" element={<Navigate to="/main" />}></Route>
-            <Route path="/main" element={<MainPage />}></Route>
-            <Route path='/category_page' element={<CategoryPage />}></Route>
+            <Route path="/main" element={<Navigate to="/main/all" />}></Route>
+            <Route path='/main/:categoryName' element={<MainPage />}></Route>
+            <Route path='/main/:categoryName/:productName' element={<ProductCard price='' label='' imgLink='' description='' id='' />}></Route>
           </Route>
-
+          <Route path="/basket" element={<Basket />}></Route>
         </Route>
       </Routes>
 

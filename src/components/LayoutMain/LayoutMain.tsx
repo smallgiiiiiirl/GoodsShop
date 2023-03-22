@@ -1,12 +1,12 @@
 import { Fragment } from "react"
 import { Outlet } from "react-router"
-import { Menu } from "../Menu"
-import layoutMain from "./LayoutMain.module.css"
+import { SideBar } from "../Menu"
+import "./LayoutMain.scss"
 
 export const LayoutMain = () => {
     return (
-        <div className={layoutMain.wrapper}>
-            <Menu />
+        <div className="wrapper">
+            <SideBar name={""} path={""} />
             <Outlet />
         </div>
 

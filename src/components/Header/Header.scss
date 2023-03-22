@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+
+  .btn {
+    width: 150px;
+    min-height: 35px;
+    margin-top: 19px;
+    background-color: rgb(31, 218, 140);
+    color: #fff;
+  }
+
+  .input_element {
+    width: 80%;
+    margin-top: 20px;
+  }
+    
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+    
+  .search_btn {
+    background-color: rgba(97, 218, 182, 1);
+  }
+    
+  button {
+    background-color: rgba(97, 218, 182, 1);
+  }
+  .basket svg{
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    color: rgb(68, 68, 66);
+  }
+}
+
+

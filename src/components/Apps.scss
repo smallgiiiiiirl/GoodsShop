@@ -1,0 +1,28 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  /* font-family: "Tajawal", sans-serif; */
+}
+
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Tajawal", sans-serif;
+}
+
+a:-webkit-any-link {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+button{
+  border: none;
+  outline: none;
+}
+
+.ant-btn-primary:not(:disabled):hover {
+  background-color: rgba(97, 218, 182, 100%); ;
+}

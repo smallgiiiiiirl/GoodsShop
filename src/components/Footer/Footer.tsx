@@ -1,6 +1,6 @@
-import footer from "./footer.module.css"
+import "./footer.scss"
 
 
 export const Footer = () => {
-    return (<footer className={footer.footer}><p className={footer.footer_paragraph}>2023, ©Andreyenko Darya</p></footer>)
+    return (<footer className="footer"><p className="footer_paragraph">2023, ©Andreyenko Darya</p></footer>)
 }
