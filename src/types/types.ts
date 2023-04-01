@@ -10,10 +10,10 @@ export interface Good {
   id: string;
   img: string;
   label: string;
-  price: string;
+  price: number;
 }
 
-export interface GoodInCard {
+export interface GoodInCart {
   good: Good;
   count: number; // кол-во товаров в корзине
   id: string; // id товара

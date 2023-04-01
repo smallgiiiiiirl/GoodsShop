@@ -1,6 +1,7 @@
 .footer {
   display: flex;
   justify-content: center;
+  flex: 0 0 auto;
   flex-shrink: 0;
   margin-top: 20px;
   .footer_paragraph {

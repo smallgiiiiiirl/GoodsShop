@@ -25,7 +25,7 @@ export const Header = () => {
             <div className="btnWrap"><Button type="primary" size={size} className="btn">
                 Войти
             </Button></div>
-            <Link to="/basket"><IconFont type="icon-shoppingcart" className='basket' /></Link>
+            <Link to="/basket"><Button type="primary" size={size} className='basket__btn'><IconFont type="icon-shoppingcart" className='basket' />Корзина: 0 byn</Button></Link>
         </div>
     )
 }

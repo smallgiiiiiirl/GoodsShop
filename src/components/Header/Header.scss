@@ -7,7 +7,7 @@
     width: 150px;
     min-height: 35px;
     margin-top: 19px;
-    background-color: rgb(31, 218, 140);
+    background-color: rgba(112, 119, 210, 100%);
     color: #fff;
   }
 
@@ -22,17 +22,25 @@
   }
     
   .search_btn {
-    background-color: rgba(97, 218, 182, 1);
+    background-color: rgba(112, 119, 210, 100%);
   }
     
   button {
-    background-color: rgba(97, 218, 182, 1);
+    background-color: rgba(112, 119, 210, 100%);
   }
   .basket svg{
-    width: 40px;
-    height: 40px;
-    margin-top: 15px;
-    color: rgb(68, 68, 66);
+    width: 29px;
+    height: 28px;
+    color: #fff;
+  }
+  .basket__btn{
+    margin-top: 19px;
+    padding: 2px;
+    min-width: 158px;
+    min-height: 35px;
+    display: flex;
+    justify-content: space-evenly;
+    color: #fff;
   }
 }
 

@@ -6,7 +6,7 @@ import "./LayoutMain.scss"
 export const LayoutMain = () => {
     return (
         <div className="wrapper">
-            <SideBar name={""} path={""} />
+            <SideBar name={""} path={""} id={""} type={""} label={""} />
             <Outlet />
         </div>
 

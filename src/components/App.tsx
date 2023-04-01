@@ -5,7 +5,7 @@ import { Navigate, Route, Routes } from 'react-router';
 import { Layout } from './Layout';
 import { MainPage } from '../pages/MainPage';
 import { LayoutMain } from './LayoutMain';
-import { ProductCard } from 'pages/ProductPage/ProductPage';
+import { ProductPage } from 'pages/ProductPage/ProductPage';
 import { Basket } from 'pages/Basket';
 
 
@@ -16,10 +16,10 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<LayoutMain />}>
-            <Route path="/" element={<Navigate to="/main" />}></Route>
-            <Route path="/main" element={<Navigate to="/main/all" />}></Route>
-            <Route path='/main/:categoryName' element={<MainPage />}></Route>
-            <Route path='/main/:categoryName/:productName' element={<ProductCard price='' label='' imgLink='' description='' id='' />}></Route>
+            <Route path="/" element={<Navigate to="/main" />} />
+            <Route path="/main" element={<Navigate to="/main/all" />} />
+            <Route path='/main/:categoryName' element={<MainPage />} />
+            <Route path="/main/:categoryName/:id" element={<ProductPage />} />
           </Route>
           <Route path="/basket" element={<Basket />}></Route>
         </Route>

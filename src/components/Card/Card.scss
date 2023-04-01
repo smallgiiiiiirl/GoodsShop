@@ -5,7 +5,7 @@
   box-shadow: 0px 2px 4px rgba(191, 196, 201, 0.2),0px 3px 4px rgba(191, 196, 201, 0.18), 0px 1px 5px rgba(191, 196, 201, 0.24);
   transform: translateY(-6px);
   opacity: 1;
-
+  
   .img{
   width: 200px;
   height: 200px;
@@ -43,6 +43,10 @@
 
   .btnWrap {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: baseline;
   }
     
   .btn {
@@ -52,13 +56,28 @@
     justify-content: center;
     height: 38px;
     font-size: 16px;
-    background-color: rgba(97, 218, 182, 100%);
+    background-color: rgba(112, 119, 210, 100%);
     color: #fff;
     transition: 0.2s;
     &:hover {
       opacity: 0.9;
     }
   }
+    .btn__counter {
+      font-size: 20px;
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 38px;
+      font-size: 16px;
+      background-color: rgba(112, 119, 210, 100%);
+      color: #fff;
+      transition: 0.2s;
+  
+      &:hover {
+        opacity: 0.9;
+      }
+    }
   
 }
-
