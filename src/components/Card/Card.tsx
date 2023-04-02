@@ -54,6 +54,7 @@ export const Card = (props: { good: Good, inBasket?: boolean }) => {
                         }
                     </div>
                 </div>
-            </div>}
+            </div>
+            }
         </NavLink >)
 }

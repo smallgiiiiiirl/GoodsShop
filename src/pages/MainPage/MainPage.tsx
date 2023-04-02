@@ -1,11 +1,11 @@
 import { Card } from "components/Card"
-import { GOODS } from "mockData"
 import { useEffect, useState } from "react"
 import { actions } from "./mainSlice"
 import "./MainPage.scss"
 import { useAppDispatch } from "store/rootStore"
 import { mainSelectors } from "../MainPage"
 import { useSelector } from "react-redux"
+import { Good } from "types/types"
 
 // const {categoryName} = useParams()
 
@@ -20,7 +20,8 @@ export const MainPage = () => {
     const dispatch = useAppDispatch()
     useEffect(() => {
         dispatch(actions.fetchProducts(params))
-    }, [params])
+    }, [params, dispatch])
+
     return (<div className="main_page">
         {products.map((good) => <Card key={good.id} good={good} />)}
     </div>)

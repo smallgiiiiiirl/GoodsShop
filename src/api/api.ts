@@ -13,15 +13,19 @@ export const getData = (
   const fullUrl = new URL(url, BASE_URL);
 
   fullUrl.search = searchParams.toString();
-  return fetch(fullUrl).then((r) => {
-    if (r.ok) {
-      return r.json();
-    }
-    throw new Error(r.statusText ?? "Failed to fetch");
-  });
+  return fetch(fullUrl)
+    .then((r) => {
+      console.log(r.statusText);
+      if (r.ok) {
+        return r.json();
+      }
+      throw new Error(r.statusText ?? "Failed to fetch");
+    })
+    .catch((r) => {});
 };
 
-export const getProduct = (id: string) => getData(`/api/cart/${id}`);
+// export const getProductOnPage = (id: string, ids: string) =>
+//   getData(`/api/goods/?${ids}=${id}`);
 
 export const getProducts = (params?: {
   categoryTypeIds?: string;

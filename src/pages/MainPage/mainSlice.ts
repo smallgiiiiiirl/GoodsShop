@@ -25,15 +25,15 @@ const { reducer, actions: sliceActions } = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchProducts.pending, (state) => {
       state.loadStatus = LOAD_STATUSES.LOADING;
-    }),
-      builder.addCase(fetchProducts.rejected, (state) => {
-        state.loadStatus = LOAD_STATUSES.ERROR;
-      }),
-      builder.addCase(fetchProducts.fulfilled, (state, action) => {
-        state.loadStatus = LOAD_STATUSES.LOADED;
-        state.goods = action.payload.items;
-        state.total = action.payload.total;
-      });
+    });
+    builder.addCase(fetchProducts.rejected, (state) => {
+      state.loadStatus = LOAD_STATUSES.ERROR;
+    });
+    builder.addCase(fetchProducts.fulfilled, (state, action) => {
+      state.loadStatus = LOAD_STATUSES.LOADED;
+      state.goods = action.payload.items;
+      state.total = action.payload.total;
+    });
   },
 });
 

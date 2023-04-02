@@ -1,18 +1,18 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getProduct } from "api/api";
+import { getProducts } from "api/api";
 import { Good, LOAD_STATUSES } from "types/types";
 
 const SLICE_NAME = "productCard";
 
-const fetchOnProductPage = createAsyncThunk(SLICE_NAME, getProduct);
+const fetchOnProductPage = createAsyncThunk(SLICE_NAME, getProducts);
 
 export interface State {
-  good: Good | null;
+  good: Good[];
   loadStatus: LOAD_STATUSES;
 }
 
 export const initialState: State = {
-  good: null,
+  good: [],
   loadStatus: LOAD_STATUSES.UNKNOWN,
 };
 
@@ -29,7 +29,7 @@ const { reducer, actions: sliceActions } = createSlice({
     });
     builder.addCase(fetchOnProductPage.fulfilled, (state, action) => {
       state.loadStatus = LOAD_STATUSES.LOADED;
-      state.good = action.payload;
+      state.good = action.payload.items;
     });
   },
 });
